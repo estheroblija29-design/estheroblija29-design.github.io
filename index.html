@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LITTLE THINGS | Small Things. Better Days.</title>
+  <meta name="description" content="LITTLE THINGS — cute, classy and useful everyday finds. Community 25, Tema.">
+  <style>
+    :root{
+      --pink:#d88998;
+      --deep:#4d2a1b;
+      --cream:#fff9f4;
+      --soft:#f8e7e9;
+      --white:#ffffff;
+      --muted:#745f56;
+      --shadow:0 12px 30px rgba(77,42,27,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--deep)}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--deep);color:white;text-align:center;padding:9px 16px;font-size:13px}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,249,244,.96);backdrop-filter:blur(10px);border-bottom:1px solid #f0dfe0}
+    .nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:2px}
+    .brand img{width:48px;height:48px;object-fit:cover;border-radius:50%}
+    nav{display:flex;gap:22px;font-size:14px;font-weight:700}
+    nav a:hover{color:var(--pink)}
+    .hero{max-width:1100px;margin:auto;padding:55px 18px 35px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+    .hero h1{font-size:clamp(44px,7vw,78px);line-height:.9;margin:0 0 18px;letter-spacing:-3px}
+    .hero h1 span{color:var(--pink)}
+    .tag{font-family:Georgia,serif;font-size:21px;font-style:italic;margin-bottom:15px}
+    .hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:560px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-block;padding:13px 19px;border-radius:999px;font-weight:800;border:1px solid var(--pink)}
+    .primary{background:var(--pink);color:white;border-color:var(--pink)}
+    .secondary{background:white}
+    .hero-card{background:var(--soft);border-radius:34px;padding:28px;text-align:center;box-shadow:var(--shadow)}
+    .hero-card img{width:min(100%,430px);border-radius:24px}
+    section{max-width:1100px;margin:auto;padding:42px 18px}
+    .section-title{text-align:center;margin-bottom:28px}
+    .section-title h2{font-size:32px;margin:0 0 8px}
+    .section-title p{color:var(--muted);margin:0}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cat{background:white;border-radius:18px;padding:20px;text-align:center;box-shadow:var(--shadow);font-weight:800}
+    .cat .icon{font-size:30px;display:block;margin-bottom:8px}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .product-art{height:190px;background:linear-gradient(135deg,#f8e7e9,#fff);display:flex;align-items:center;justify-content:center;font-size:70px}
+    .product-body{padding:18px;display:flex;flex-direction:column;flex:1}
+    .pill{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--pink);font-weight:800}
+    .product h3{margin:7px 0;font-size:19px}
+    .product p{color:var(--muted);font-size:14px;line-height:1.5;flex:1}
+    .price{font-size:20px;font-weight:900;margin:8px 0 13px}
+    .order{background:var(--deep);color:white;text-align:center;padding:11px;border-radius:12px;font-weight:800}
+    .about{background:var(--soft);border-radius:30px;padding:35px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .about h2{font-size:32px;margin-top:0}
+    .about p{line-height:1.7;color:var(--muted)}
+    .contact{background:var(--deep);color:white;border-radius:30px;padding:38px;text-align:center}
+    .contact p{color:#f6e8e3}
+    .contact .primary{background:white;color:var(--deep);border-color:white}
+    footer{text-align:center;padding:30px 18px;color:var(--muted);font-size:13px}
+    .note{font-size:12px;color:var(--muted);text-align:center;margin-top:18px}
+    @media(max-width:800px){
+      nav{display:none}
+      .hero{grid-template-columns:1fr;padding-top:35px}
+      .hero-card{order:-1}
+      .categories{grid-template-columns:repeat(2,1fr)}
+      .products{grid-template-columns:1fr 1fr}
+      .about{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .products{grid-template-columns:1fr}
+      .hero h1{font-size:55px}
+      .categories{gap:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">📍 Community 25, Tema &nbsp; • &nbsp; Local delivery available</div>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home"><img src="logo.png" alt="Little Things logo"><span>LITTLE THINGS</span></a>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <div class="hero">
+      <div>
+        <div class="tag">Small Things. Better Days. ✨</div>
+        <h1>Find your<br><span>little</span> joy.</h1>
+        <p>Cute, useful and affordable everyday finds — carefully picked to make life a little easier and a lot more lovely.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#shop">Shop the finds</a>
+          <a class="btn secondary" href="#contact">Order on WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="logo.png" alt="Little Things">
+        <p><strong>HOME • BEAUTY • GADGETS • TRAVEL • & MORE</strong></p>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-title">
+        <h2>Shop by little category</h2>
+        <p>Useful things you’ll be happy you found.</p>
+      </div>
+      <div class="categories">
+        <div class="cat"><span class="icon">🏠</span>HOME</div>
+        <div class="cat"><span class="icon">💗</span>BEAUTY</div>
+        <div class="cat"><span class="icon">📱</span>GADGETS</div>
+        <div class="cat"><span class="icon">✈️</span>TRAVEL</div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="section-title">
+        <h2>Our little finds</h2>
+        <p>Tap “Order” to send an enquiry on WhatsApp.</p>
+      </div>
+
+      <div class="products">
+        <article class="product">
+          <div class="product-art">🌬️</div>
+          <div class="product-body"><span class="pill">Gadgets</span><h3>Rechargeable Mini Fan</h3><p>Portable cooling for home, school, work and travel.</p><div class="price">GH₵90–130</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Rechargeable%20Mini%20Fan.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🥡</div>
+          <div class="product-body"><span class="pill">Home</span><h3>Mini Bag Sealer</h3><p>Keep opened snacks and food packets neatly sealed.</p><div class="price">GH₵70–100</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Mini%20Bag%20Sealer.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">💡</div>
+          <div class="product-body"><span class="pill">Home</span><h3>Motion-Sensor Light</h3><p>A handy light for wardrobes, rooms, corridors and more.</p><div class="price">GH₵60–100</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Motion-Sensor%20Light.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🎀</div>
+          <div class="product-body"><span class="pill">Beauty</span><h3>Heatless Hair Curler</h3><p>Create curls without making heat styling the centre of your routine.</p><div class="price">GH₵60–100</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Heatless%20Hair%20Curler.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🧳</div>
+          <div class="product-body"><span class="pill">Travel</span><h3>Travel Organizer</h3><p>Keep toiletries and small essentials tidy inside your bag.</p><div class="price">GH₵90–150</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Travel%20Organizer.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🫧</div>
+          <div class="product-body"><span class="pill">Beauty</span><h3>Scalp Massager</h3><p>A simple accessory to add to your shampoo routine.</p><div class="price">GH₵40–70</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Scalp%20Massager.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">📱</div>
+          <div class="product-body"><span class="pill">Gadgets</span><h3>Magnetic Phone Stand</h3><p>Keep your phone comfortably positioned for studying, watching and calls.</p><div class="price">GH₵60–100</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Magnetic%20Phone%20Stand.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🧺</div>
+          <div class="product-body"><span class="pill">Home</span><h3>Foldable Storage Organizer</h3><p>Make better use of wardrobes, shelves and small spaces.</p><div class="price">GH₵70–120</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Foldable%20Storage%20Organizer.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🔦</div>
+          <div class="product-body"><span class="pill">Gadgets</span><h3>Rechargeable / Solar Lamp</h3><p>A compact light for studying, bedrooms, travel and power interruptions.</p><div class="price">GH₵100–170</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Rechargeable%20Solar%20Lamp.">Order / Enquire</a></div>
+        </article>
+
+        <article class="product">
+          <div class="product-art">🥤</div>
+          <div class="product-body"><span class="pill">Gadgets</span><h3>Portable Mini Blender</h3><p>Blend fruit drinks and smoothies at home or on the go.</p><div class="price">GH₵150–220</div><a class="order" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27m%20interested%20in%20the%20Portable%20Mini%20Blender.">Order / Enquire</a></div>
+        </article>
+      </div>
+      <p class="note">Prices shown are launch targets and can be updated when your final supplier prices are confirmed.</p>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div>
+          <h2>Why LITTLE THINGS? 🤍</h2>
+          <p>Sometimes the smallest discoveries make the biggest difference. LITTLE THINGS brings together practical, cute and interesting finds that solve everyday problems and add a little joy.</p>
+          <p><strong>Based in Community 25, Tema.</strong> Starting local, growing one happy customer at a time.</p>
+        </div>
+        <div style="text-align:center;font-size:90px">🛍️✨💗</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>Found your little thing?</h2>
+        <p>Send us a WhatsApp message to check availability, price and delivery.</p>
+        <a class="btn primary" href="https://wa.me/233XXXXXXXXX?text=Hi%20Little%20Things%2C%20I%27d%20like%20to%20place%20an%20order.">💬 WhatsApp LITTLE THINGS</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>LITTLE THINGS</strong> • Small Things. Better Days. ✨<br>
+    Community 25, Tema • © 2026
+  </footer>
+</body>
+</html>
